@@ -13,13 +13,13 @@ import { AccuielComponent } from './accueil/accuiel.component';
 import { ModifierParieurComponent } from './modifier-parieur/modifier-parieur.component';
 import { AjoutSportComponent } from './ajout-sport/ajout-sport.component';
 import { ModifSportComponent } from './modif-sport/modif-sport.component';
-import { MatchComponent } from './mat/mat.component';
 import { AjoutMatchComponent } from './ajout-match/ajout-match.component';
 import { AdminComponent } from './admin/admin.component';
 import { InterfaceAdminComponent } from './interface-admin/interface-admin.component';
 import { ListeSportsComponent } from './liste-sports/liste-sports.component';
-import { SportComponent } from './sport/sport.component';
 import { ConcoursNaComponent } from './concours-na/concours-na.component';
+import { ListeMatchsComponent } from './liste-matchs/liste-matchs.component';
+import { SportsComponent } from './sports/sports.component';
 
 
 
@@ -37,13 +37,13 @@ import { ConcoursNaComponent } from './concours-na/concours-na.component';
     ModifierParieurComponent,
     AjoutSportComponent,
     ModifSportComponent,
-    MatchComponent,
     AjoutMatchComponent,
     AdminComponent,
     InterfaceAdminComponent,
     ListeSportsComponent,
-    SportComponent,
     ConcoursNaComponent,
+    ListeMatchsComponent,
+    SportsComponent,
     
     
    

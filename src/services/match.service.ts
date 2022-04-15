@@ -15,10 +15,6 @@ export class MatchService {
 
   constructor(private http: HttpClient) { }
 
-  
-  
-
-  
   getAllSport():Observable<any>{
     return this.http.get("http://localhost:8092/spring/api/sports");
 
@@ -33,17 +29,18 @@ export class MatchService {
 
   
 }
+
 getAllMatch():Observable<any>{
-  return this.http.get("http://localhost:8092/spring/api/match");
+  return this.http.get("http://localhost:8092/spring/api/paris");
 
 }
 public getmatch(mat){
-  return this.http.get("http://127.0.0.1:8092/spring/api/match/"+mat.id);
+  return this.http.get("http://127.0.0.1:8092/spring/api/pari/"+mat.id);
 }
 addMatch(newMatch:Match){
   const headers = { 'content-type': 'application/json'}  
   const body=JSON.stringify(newMatch);
-  return  this.http.post<any>('http://127.0.0.1:8092/spring/api/ajouter',body,{'headers':headers}).subscribe(data => {
+  return  this.http.post<any>('http://127.0.0.1:8092/spring/api/add-pari',body,{'headers':headers}).subscribe(data => {
    data.id;
    
 });

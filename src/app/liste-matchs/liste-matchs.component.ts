@@ -1,30 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Sport } from 'src/model/sport';
+import { Match } from 'src/model/match';
 import { MatchService } from 'src/services/match.service';
 import *as $ from 'jquery'
-
 @Component({
-  selector: 'app-liste-sports',
-  templateUrl: './liste-sports.component.html',
-  styleUrls: ['./liste-sports.component.css']
+  selector: 'app-liste-matchs',
+  templateUrl: './liste-matchs.component.html',
+  styleUrls: ['./liste-matchs.component.css']
 })
-export class ListeSportsComponent implements OnInit {
+export class ListeMatchsComponent implements OnInit {
 
-  newsport =new Sport();
-  sport:any;
+  newmatch =new Match();
+  match:any;
 
   ajout:boolean=false;
   id: number;
   
 
 
-  constructor(private servicematch:  MatchService,
-    private route:Router) { }
+  constructor(private servicematch:  MatchService, private route:Router) { }
 
   ngOnInit(): void {
-    this.servicematch.getAllSport().subscribe(data=>{
-      this.sport=data;
+    this.servicematch.getAllMatch().subscribe(data=>{
+      this.match=data;
 
   } 
   
@@ -48,12 +46,12 @@ clickMethod(id, name) {
     })
   }
 }
-Updatesport(id: number){
+Updatematch(id: number){
   this.route.navigate(['update_sport',id]) ;
 
  }
  plus_de_detailes(id : number){
-   this.route.navigate(['sport',id])
+   this.route.navigate(['match',id])
  
  }
 

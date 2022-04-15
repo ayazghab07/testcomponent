@@ -6,56 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Rubic landing page.">
     <meta name="author" content="Devcrud">
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- font icons -->
     
     <!-- Bootstrap + Rubic main styles -->
-	<link rel="stylesheet" href="mat.component.css">
+	<link rel="stylesheet" href="liste-matchs.component.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 <header class="header d-flex justify-content-center">
-  <div class="container">
-      <div class="row h-100 align-items-center">
-          <div class="col-md-7">
-              <div class="header-content">
-                 
-                <h3 class="header-title"><strong class="text-primary"> <i> Liste Des Matchs</i> </strong><span></span></h3>
-                <h4 class="header-subtitle"> <a [routerLink]="['/ajout_match']">Ajouter Match</a><br> </h4>
-                <div *ngIf="mat" class="col-sm-3">
-                    <table id="myInput"  class="table table-bordered table-striped">
-                          <th><span class="text-light">Nom </span></th>
-                          <th><span class="text-light">Date de début</span></th>
-                          <th><span class="text-light">Date de fin</span></th>
-                          <th><span class="text-light">Supprimer</span></th>
-                           <th><span class="text-light">Modifier</span></th>
-                      <tbody id="myTable">
-                        <tr *ngFor="let ma of mat"  >
-                          <th><span class="text-light" >{{ma.nom}}</span></th>
-                          <th><span class="text-light" >{{ma.deb_match}}</span></th>
-                          <th><span class="text-light" >{{ma.fin_match}}</span></th>
-                           <th><button type="button" class="btn btn-danger" (click)="clickMethod(ma.id, ma.nom)">Supprimer</button></th>
-                           <th><button type="button" class="btn btn-danger" (click)="Updatesport(ma.nom)">Modifier</button></th>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-          </div>
-        </div>   
-      </div>  
-  </div>
+    <div class="container">
+        <div class="row h-100 align-items-center">
+            <div class="col-md-7">
+                <div class="header-content">
+                    <br><br><br><br><br><br>
+                    <h3 class="header-title"><strong class="text-primary"> <i> Liste Matchs</i> </strong></h3>
+                    <br>
+                    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                    <br>
+            
+                    <h4 class="header-subtitle"> <a [routerLink]="['/ajout_match']">Ajouter Sport </a><br> </h4>
+                    
+                    <div *ngIf="match" class="col-sm-3">
+                        <table id="myInput"  class="table table-bordered table-striped">
+                              <th><span class="text-light">Nom </span></th>
+                              <th><span class="text-light">Pari Montant</span></th>
+                              <th><span class="text-light">Temp Début</span></th>
+                              <th><span class="text-light">Temp Fin</span></th>
+                              <th><span class="text-light" >Supprimer</span></th>
+                              <th><span class="text-light" >Modifier</span></th>
+                              <th><span class="text-light" >PLus de détails</span></th>
+                             
+                          <tbody id="myTable">
+                            <tr *ngFor="let mat of match"  >
+                              <th><span class="text-light" >{{mat.nom}}</span></th>
+                              <th><span class="text-light" >{{mat.pari_montant}}</span></th>
+                              <th><span class="text-light" >{{mat.temp_deb}}</span></th>
+                              <th><span class="text-light" >{{mat.temp_fin}}</span></th>
+                               <th><a (click)="clickMethod(mat.id, mat.nom)" class="fa fa-trash"></a></th>
+                               <th><a (click)="Updatematch(mat.id)"class=' fa fa-edit '></a></th>
+                               <th><a (click)="plus_de_detailes(mat.id)"><i class='fa fa-bars'></i></a></th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </div>  
+            </div>
+          </div>   
+        </div>  
 </header>
 <div class="social-wrapper" id="features">
   <div class="container">
       <div class="social-txt">
           <h6 class="title">Social Media</h6>
-          <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptate numquam sed expedita vitae ipsa?</p>
       </div>
       <div class="social-links">
-          <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
-          <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
-          <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
-          <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
-          <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-          <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+        <a href="https://www.facebook.com/PromosportTunisie" class="fa fa-facebook"></a>
+        <a href="http://promosport.tn/fr#.YjTzI5FNHYM.twitter" class="fa fa-twitter"></a>
+        <a href="http://promosport.tn/fr" class="fa fa-google"></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fpromosport.tn%2Ffr%23.YjTx9T69Pxs.linkedin" class="fa fa-linkedin"></a>
       </div>
   </div>          
 </div>
@@ -64,36 +73,18 @@
       <div class="row justify-content-around">
           <div class="col-lg-8">
               <div class="tabs-container">
-                  <ul class="nav tab-nav" id="pills-tab">
-                      <li class="item">
-                          <a class="link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"aria-selected="true">Tab 1</a>
-                      </li>
-                      <li class="item">
-                          <a class="link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"aria-selected="false">Tab 2</a>
-                      </li>
-                      <li class="item">
-                          <a class="link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"aria-selected="false">Tab 3</a>
-                      </li>
-                  </ul>
+
                   <div class="tab-content">
                       <div class="tab-pane fade show active" id="pills-home">
-                          <h4 class="title">Some Title</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam repellendus esse consectetur possimus voluptatem veniam quas ducimus ullam deleniti? Possimus, unde eveniet suscipit perspiciatis dicta numquam voluptate fuga id, optio.</p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempore molestiae excepturi commodi ullam provident, optio dicta, nulla officiis consectetur soluta et officia neque odio blanditiis aspernatur cum cumque error?</p>
+                          <h4 class="title">LISTE DES POINTS DE VENTE PAR GOUVERNORAT</h4>
+                          <img src="assets/images/photosprtifnoir.jpg" alt="" class="w-100 tower">
 
-                          <button class="btn btn-primary mt-3">Download</button>
-                      </div>
-                      <div class="tab-pane fade" id="pills-profile">
-                          <h4 class="title">Another Title</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit unde totam nostrum, sunt accusamus in delectus aspernatur, nisi eligendi ipsum eum! Aspernatur recusandae nihil rem qui quam vero, saepe inventore tempora? Necessitatibus corporis, nam minus reiciendis rerum? Eius voluptatem facilis, vitae minima modi corrupti ullam, temporibus vel eum fugit inventore obcaecati provident ratione, ab aliquid perspiciatis commodi, autem in nemo.</p>
-                          <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing.</strong></p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit tempore molestiae excepturi commodi ullam provident, optio dicta, nulla officiis consectetur soluta et officia neque odio blanditiis aspernatur cum cumque error?</p>
-                      </div>
                       <div class="tab-pane fade" id="pills-contact">
                           <h4 class="title">Some Other </h4>
                           <p>Consectetur amet architecto, temporibus, debitis impedit dolore eius. Enim alias beatae architecto iusto incidunt pariatur reprehenderit impedit ipsum ex at deserunt, inventore corrupti rerum eius obcaecati. Itaque repellendus illum aut beatae ex quasi doloremque voluptatem. Numquam at possimus, obcaecati, voluptas aut vel nam recusandae pariatur error illum quaerat sunt! Ipsam rerum enim hic atque nemo debitis, voluptate obcaecati inventore culpa. Odit adipisci eos natus fugiat. Id, deserunt qui aliquam? Provident tempora repellat, repellendus consequatur quia dolor at dolore temporibus esse in rem ea necessitatibus quo nesciunt eos a dolorum voluptates, tenetur non eius quasi! Autem provident amet, maiores tenetur, eveniet dicta, laborum odio velit sint consequatur beatae nemo at! Aperiam magnam eveniet rerum, optio consequuntur quas maiores ullam necessitatibus nesciunt.</p>
                       </div>
                   </div>
+                 </div> 
               </div>
           </div>
           <div class="col-lg-4 d-none d-lg-block align-self-center">
@@ -246,10 +237,10 @@
               <div class="testmonial">                        
                   <p class="description"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, eaque, repellat. Corporis facilis reprehenderit, cupiditate.</i></p>
                   <div class="media">
-                      <img class="mr-3" src="./src/assets/images/avatar1.jpg" width="60" alt="Generic placeholder image">
+                      <img class="mr-3" src="./src/assets/images/safari-sam-jeu-gratuit.jpg" width="60" >
                       <div class="media-body">
-                          <h6 class="title">Emma Re</h6>
-                          <p class="text-muted">Web Designer</p>
+                          <h6 class="title">Jeux</h6>
+                          <p class="text-muted">SAFARI</p>
                       </div>
                   </div>
               </div>
@@ -325,3 +316,4 @@
 <!-- Rubic js -->
 <script src="assets/js/rubic.js"></script>
 </html>
+<router-outlet></router-outlet>

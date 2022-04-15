@@ -8,12 +8,12 @@ import { AccuielComponent } from './accueil/accuiel.component';
 import { ModifierParieurComponent } from './modifier-parieur/modifier-parieur.component';
 import { AjoutSportComponent } from './ajout-sport/ajout-sport.component';
 import { ModifSportComponent } from './modif-sport/modif-sport.component';
-import { MatchComponent } from './mat/mat.component';
 import { AjoutMatchComponent } from './ajout-match/ajout-match.component';
 import { InterfaceAdminComponent } from './interface-admin/interface-admin.component';
 import { ListeSportsComponent } from './liste-sports/liste-sports.component';
-import { SportComponent } from './sport/sport.component';
 import { ConcoursNaComponent } from './concours-na/concours-na.component';
+import { ListeMatchsComponent } from './liste-matchs/liste-matchs.component';
+import { SportsComponent } from './sports/sports.component';
 
 
 const routes: Routes = [
@@ -26,14 +26,11 @@ const routes: Routes = [
   {path:'ajout_sport', component:AjoutSportComponent},
   {path:'ajout_match', component:AjoutMatchComponent},
   {path:'update_sport/:id' ,component:ModifSportComponent},
-  {path:'match/:id' ,component:MatchComponent},
   {path:'interfaceAdmin' ,component:InterfaceAdminComponent},
   {path:'listeSports' ,component:ListeSportsComponent },
-  {path:'sports' ,component:SportComponent },
-  {path:'concour_na' ,component:ConcoursNaComponent 
-
-},
-  
+  {path:'concour_na' ,component:ConcoursNaComponent },
+  {path:'sport/:id' ,component:ListeMatchsComponent},
+  {path:'sports' ,component:SportsComponent},
 
  
   
