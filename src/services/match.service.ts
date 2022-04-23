@@ -17,6 +17,9 @@ export class MatchService {
 
   getAllSport():Observable<any>{
     return this.http.get("http://localhost:8092/spring/api/sports");
+  }
+  getAllSportId(sport):Observable<any>{
+    return this.http.get("http://localhost:8092/spring/api/sport/"+sport.id);
 
   }
   addSport(newSport:Sport){
@@ -54,7 +57,7 @@ public onDelete(id): Observable<any> {
 }
 public onDeleteMatch(id): Observable<any> {
   console.log(id);
-  return this.http.delete<Match>("http://127.0.0.1:8092/spring/api/supprim-match/"+id);
+  return this.http.delete<Match>("http://127.0.0.1:8092/spring/api/supprim-pari/"+id);
   
 }
 public Updatesport(id: number): Observable<Sport> {

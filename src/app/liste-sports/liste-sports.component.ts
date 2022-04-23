@@ -41,7 +41,7 @@ export class ListeSportsComponent implements OnInit {
 }
 clickMethod(id, name) {
   if(confirm("Are you sure to delete "+name)) {
-    this.servicematch.onDeleteMatch(id).subscribe(data=>{
+    this.servicematch.onDelete(id).subscribe(data=>{
       console.log(data);
       
       this.ngOnInit();

@@ -26,7 +26,7 @@ export class AjoutMatchComponent implements OnInit {
          console.log(this.nouvmatch);
          this.matchService.addMatch(this.nouvmatch);  
          window.alert("match est ajouté !");
-         this.router.navigate(['match']);
+         this.router.navigate(['sport/:id']);
          isAdded:true;
  
         

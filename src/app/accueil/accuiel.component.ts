@@ -10,6 +10,7 @@ export class AccuielComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

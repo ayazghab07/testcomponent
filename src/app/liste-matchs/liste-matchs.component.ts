@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Match } from 'src/model/match';
 import { MatchService } from 'src/services/match.service';
 import *as $ from 'jquery'
+import { Sport } from 'src/model/sport';
 @Component({
   selector: 'app-liste-matchs',
   templateUrl: './liste-matchs.component.html',

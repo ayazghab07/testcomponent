@@ -11687,12 +11687,13 @@ img.tower {
   width: 262px;
   height: 450px;
 }
-#flous{
 
- 
-  border-radius: 50%;
-}
 #article{
-  border-radius: 50%;
+  border-radius: 00%;
+
+}
+#im1{
+  border-radius: 00%;
+  height: 180px;
 
 }
