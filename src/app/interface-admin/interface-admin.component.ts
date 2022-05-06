@@ -46,6 +46,6 @@ Updatesport(id: number){
  }
  plus_de_detailes(id : number){
    this.route.navigate(['match',id])
- 
  }
+ 
 }

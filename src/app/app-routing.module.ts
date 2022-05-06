@@ -19,6 +19,16 @@ import { CommercialComponent } from './commercial/commercial.component';
 import { TechnologieComponent } from './technologie/technologie.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { SporttableComponent } from './sporttable/sporttable.component';
+import { MatchtableComponent } from './matchtable/matchtable.component';
+import { ModifierMatchComponent } from './modifier-match/modifier-match.component';
+import { EquipeComponent } from './equipe/equipe.component';
+import { AjoutEquipeComponent } from './ajout-equipe/ajout-equipe.component';
+import { ModifierEquipeComponent } from './modifier-equipe/modifier-equipe.component';
+import { JoueurComponent } from './joueur/joueur.component';
+import { ModifierJoueurComponent } from './modifier-joueur/modifier-joueur.component';
+import { AjoutJoueurComponent } from './ajout-joueur/ajout-joueur.component';
+import { Matchparieur2Component } from './matchparieur2/matchparieur2.component';
+
 
 
 const routes: Routes = [
@@ -30,17 +40,24 @@ const routes: Routes = [
   {path:'update_parieur/:id', component:ModifierParieurComponent },
   {path:'ajout_sport', component:AjoutSportComponent},
   {path:'ajout_match', component:AjoutMatchComponent},
+  {path:'ajout_equipe', component:AjoutEquipeComponent},
   {path:'update_sport/:id' ,component:ModifSportComponent},
+  {path:'update_match/:id' ,component:ModifierMatchComponent},
+  {path:'update_equipe/:id' ,component:ModifierEquipeComponent},
   {path:'interfaceAdmin' ,component:InterfaceAdminComponent},
   {path:'listeSports' ,component: SporttableComponent },
   {path:'concour_na' ,component:ConcoursNaComponent },
-  {path:'sport/:id' ,component:ListeMatchsComponent},
+  {path:'sport/:id' ,component:MatchtableComponent},
+  {path:'equipe/:id' ,component:EquipeComponent},
   {path:'sports' ,component:SportsComponent},
   {path:'concour_pro' ,component:ConcourProComponent},
   {path:'commercial' ,component:CommercialComponent},
   {path:'tech' ,component:TechnologieComponent},
   {path:'calendrier' ,component:CalendrierComponent},
-
+  {path:'joeur/:id' ,component:JoueurComponent},
+  {path:'update_joueur/:id' ,component:ModifierJoueurComponent},
+  {path:'ajout_joueur', component:AjoutJoueurComponent},
+  {path:'matchpar', component:Matchparieur2Component},
   
 ];
 

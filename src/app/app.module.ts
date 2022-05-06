@@ -26,6 +26,15 @@ import { CommercialComponent } from './commercial/commercial.component';
 import { TechnologieComponent } from './technologie/technologie.component';
 import { CalendrierComponent } from './calendrier/calendrier.component';
 import { SporttableComponent } from './sporttable/sporttable.component';
+import { MatchtableComponent } from './matchtable/matchtable.component';
+import { ModifierMatchComponent } from './modifier-match/modifier-match.component';
+import { EquipeComponent } from './equipe/equipe.component';
+import { AjoutEquipeComponent } from './ajout-equipe/ajout-equipe.component';
+import { ModifierEquipeComponent } from './modifier-equipe/modifier-equipe.component';
+import { JoueurComponent } from './joueur/joueur.component';
+import { ModifierJoueurComponent } from './modifier-joueur/modifier-joueur.component';
+import { AjoutJoueurComponent } from './ajout-joueur/ajout-joueur.component';
+import { Matchparieur2Component } from './matchparieur2/matchparieur2.component';
 
 
 
@@ -55,9 +64,19 @@ import { SporttableComponent } from './sporttable/sporttable.component';
     TechnologieComponent,
     CalendrierComponent,
     SporttableComponent,
+    MatchtableComponent,
+    ModifierMatchComponent,
+    EquipeComponent,
+    AjoutEquipeComponent,
+    ModifierEquipeComponent,
+    JoueurComponent,
+    ModifierJoueurComponent,
+    AjoutJoueurComponent,
+    Matchparieur2Component,
     
     
-   
+    
+
   ],
   imports: [
     BrowserModule,

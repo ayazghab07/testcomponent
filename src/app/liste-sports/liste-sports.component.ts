@@ -23,7 +23,7 @@ export class ListeSportsComponent implements OnInit {
     private route:Router) { }
 
   ngOnInit(): void {
-    this.servicematch.getAllSport().subscribe(data=>{
+    this.servicematch.getAllSportId(this.id).subscribe(data=>{
       this.sport=data;
 
   } 

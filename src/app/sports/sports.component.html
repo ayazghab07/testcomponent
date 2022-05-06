@@ -7,48 +7,154 @@
     <meta name="description" content="Start your development with Rubic landing page.">
     <meta name="author" content="Devcrud">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- font icons -->
     
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+
+     <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+ 
+    <!-- font icons -->
     <!-- Bootstrap + Rubic main styles -->
 	<link rel="stylesheet" href="sports.component.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+  <br><br>
 <header class="header d-flex justify-content-center">
     
   <div class="container">
-      <div class="row h-100 align-items-center">
-          <div class="col-md-11">
-              <div class="header-content">
-                <br>
-                <input class="form-control" id="myInput" type="text" placeholder="Search..">
-                <br>
-                <div class="list-group">
-                    <h1>Les top des Sports</h1>
-                    <ul>
-                        <li><a href="#"><img src="assets/images/foot.jpg" > Football</a></li><li><a href="#"><img src="assets/images/tennis.jpg" > Tennis</a></li><li>
-                        <li><a href="#"><img src="assets/images/bas.jpg" > Basketball</a></li><li><a href="#"><img src="assets/images/rug1.webp" > Rugby</a></li><li>
-                         <li><a href="#"><img src="assets/images/handbal.jpg" > Handball</a></li>
-                      </ul>  
-                  </div>
-                  <div class="list-group">
-                    <h1>Toutes Les Sports</h1>
-                    <ul>
-                        <li><a href="#"><img id="img2" src="assets/images/Aussie.jpg" > Aussie Rules</a></li>
-                        
-                        <li><a href="#"><img  id="img2" src="assets/images/Baseball1.png" > Baseball</a></li>
-                            <li><a href="#"><img src="assets/images/Boxe1.jpg"  > Boxe</a></li>
-                            <li><a href="#"><img src="assets/images/fff1.webp" id="img2" > Foot américain</a></li>
-                            
-                            <br><br>
-                             <li><a href="#"><img src="assets/images/Golf1.jpg" id="img2" >     Golf </a></li>
-                             <li><a href="#"><img src="assets/images/Nascar1.jpg" id="img2" > Nascar</a></li>
-                             <li><a href="#"><img src="assets/images/Rallye1.jpg" id="img2" >Rallye</a></li>
-                             <li><a href="#"><img src="assets/images/Snooker1.webp" id="img2" > Snooker</a></li>
-                      </ul>  
-                  </div>
-                  </div>
-              </div>  
+    <br><br>
+    <section id="menu" class="menu section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <div class="col-lg-12 d-flex justify-content-center">
+            <p>Nos Sports</p>
           </div>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="menu-flters">
+                <li data-filter="*" class="filter-active">Touts les sports</li>
+                <li data-filter=".filter-starters">FootBall</li>
+                <li data-filter=".filter-salads">HandBool</li>
+                <li data-filter=".filter-specialty">Tennis</li>
+              </ul>
+            </div>
+          </div>
+         
+          <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+  
+            <div class="col-lg-6 menu-item filter-starters">
+              <img src="assets/images/foot.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                <a  [routerLink]="['/matchpar']">Football</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                ChampionsLeague, Europa League, Europa Conference, Copa Libertadores
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="assets/images/te.png" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Tennis</a><span>Lire suite</span>
+              </div>
+              <div class="menu-ingredients">
+                Cotes Boostées Madrid H, Madrid H, Madrid F, Roland Garros H
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-starters">
+              <img src="assets/images/basket.png" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Basketball</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                Euroleague H ,Eurocup H,BNXT League,BBL
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-starters">
+              <img src="assets/images/baseball-ball.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Baseball</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                MLB,KBO,NPB
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+              <img src="assets/images/rugby2.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Rugby</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                United Rugby Championship,Champions Cup,Challenge,Super Rugby Pacific,Test-Matchs
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="assets/images/handbal.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">HandBall</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                Euro. League H,Champ. League ,Champ. League 
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-starters">
+              <img src="assets/images/VolleyBall2.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Volley Ball</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                Ligue A,Bundesliga ,SuperLega,Tauron Liga
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-salads">
+              <img src="assets/images/Boxe1.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Boxe</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                International,Toutes les compétitions,Combats
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-salads">
+              <img src="assets/images/Golf1.jpg" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Golf</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                Betfred British Masters,Wells Fargo Championsgip,Solheim Cup,Ryder Cup 2023
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="assets/images/moto.webp" class="menu-img" alt="">
+              <div class="menu-content">
+                <a href="#">Moto</a><span>Lire la Suite</span>
+              </div>
+              <div class="menu-ingredients">
+                Championnat du monde Moto GP,Championnat du monde Moto 2,Championnat du monde Moto 3
+               
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Menu Section -->
+         
       </div>  
 </header>
 

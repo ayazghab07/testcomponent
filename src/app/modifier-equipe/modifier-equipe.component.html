@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Rubic landing page.">
+    <meta name="author" content="Devcrud">
+    <!-- font icons -->
+    
+    <!-- Bootstrap + Rubic main styles -->
+	<link rel="stylesheet" href="modifier-equipe.component.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<header class="header d-flex justify-content-center">
+  <div class="container">
+      <div class="row h-100 align-items-center">
+          <div class="col-md-7">
+              <div class="header-content">
+                <div class="header-content">
+                    <h3 class="header-title"><strong class="text-primary">MODIFIER EQUIPE</strong></h3>
+                  
+                    
+                 
+                </div>  
+              </div>  
+          </div>
+          <div class="col-md-5 d-none d-md-block">
+              <form (ngSubmit)='onSubmit()' #f="ngForm" class="header-form">
+                  <div class="head"><span class="text-primary">Modifier Equipe</span> </div>
+                  <div class="body">
+                      <div class="form-group">
+                          <input type="text" class="form-control" [(ngModel)]="nouvequipe.nom"  name="Nom"  placeholder="Nom" required>
+                      </div>
+                   
+                      <div class="form-group">
+                          <input type="text" class="form-control" [(ngModel)]="nouvequipe.description" placeholder="Description" name="Description" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="nouvequipe.type" placeholder="Type" name="Type" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="nouvequipe.niveau" placeholder="Niveau" name="Niveau" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="nouvequipe.res" placeholder="Résultat" name="Résultat" required>
+                    </div>
+                  <div class="footer">
+                      <button class="btn btn-primary btn-block">Mise à jour</button>
+                  </div>
+                  </div>
+              </form> 
+          </div>
+      </div>  
+  </div>
+</header>
+<div class="social-wrapper" id="features">
+  <div class="container">
+      <div class="social-txt">
+          <h6 class="title">Social Media</h6>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/PromosportTunisie" class="fa fa-facebook"></a>
+        <a href="http://promosport.tn/fr#.YjTzI5FNHYM.twitter" class="fa fa-twitter"></a>
+        <a href="http://promosport.tn/fr" class="fa fa-google"></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fpromosport.tn%2Ffr%23.YjTx9T69Pxs.linkedin" class="fa fa-linkedin"></a>
+      </div>
+  </div>          
+</div>
+        
+<section class="section" id="contact">
+  <div class="container text-center">
+      <h6 class="display-4 has-line">CONTACT US</h6>
+      <p class="mb-5 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <form>
+          <div class="row mb-4">
+              <div class="col-md-6">
+                  <div class="form-group pb-1">
+                      <input type="text" class="form-control" required placeholder="Name">            
+                  </div>
+                  <div class="form-group pb-1">
+                      <input type="email" class="form-control" required placeholder="Email">          
+                  </div>
+                  <div class="form-group ">
+                      <input type="text" class="form-control" placeholder="Subject">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <textarea name="" id="" cols="" rows="7" class="form-control" required placeholder="Message"></textarea>
+              </div>
+          </div>
+          <input type="submit" class="btn btn-primary btn-block" value="Send Message">
+      </form>
+  </div>
+</section>
+
+</body>
+<!-- core  -->
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<!-- bootstrap 3 affix -->
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+<!-- Rubic js -->
+<script src="assets/js/rubic.js"></script>
+</html>

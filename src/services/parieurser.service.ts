@@ -43,9 +43,9 @@ export class ParieurserService {
   
     return this.http.get<Parieur>("http://127.0.0.1:8092/spring/api/parieur/"+id);
   }
-  public Updatepar2(id: number, parieur: Parieur): Observable<Parieur> {
+  public Updatepar2(parieur: Parieur): Observable<Parieur> {
     
-    return this.http.post<Parieur>("http://127.0.0.1:8092/spring/api/parieur/"+id, parieur);
+    return this.http.post<Parieur>("http://127.0.0.1:8092/spring/api/modif-parieur", parieur);
   }
   
 }

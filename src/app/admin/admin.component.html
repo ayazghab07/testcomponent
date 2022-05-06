@@ -15,90 +15,38 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 <header class="header d-flex justify-content-center">
-  <div class="container">
-      <div class="row h-100 align-items-center">
-          <div class="col-md-7">
-             
-                <div class="header-content">
-                    <h3 class="header-title"><strong class="text-primary">A PROPOS DE PROMOSPORT</strong></h3>
-                    <h4 class="header-subtitle">Cadre Juridique </h4>
-                    <p>La société Promosport est une entreprise publique sous tutele du Ministère de la Jeunesse des Sports et de l’Education physique, créée par la loi 84-63 du 6 Août 1984, portant organisation et développement des activités physiques et sportives ( art 67 à 70 ). Elle est chargée, en vertu de la réglementation en vigueur de l’organisation des concours de pronostics sportifs, des jeux, des compétitions et de toutes opérations assimilées et qui ont pour objet la promotion des activités physiques et sportives.</p>
-                    <h4 class="header-subtitle">   Organes de gestion et de contrôle : </h4>
-                     - Le Premier ministère.<br>
-                     - Le Ministère de la Jeunesse des Sports et de l’Education physique.<br>
-                     - Le Ministère des Finances.<br>
-                     - Le Ministère du Développement et de la Coopération Internationale.<br>
-                     - Le Ministère de l’Intérieur et du Développement local.<br>
-                     - La Fédération Tunisienne du Football
-             
-              </div>  
-          </div>
-          <div class="col-md-5 d-none d-md-block">
-              <form class="header-form" (ngSubmit)='onSubmit(f)' #f="ngForm" ngNativeValidate>
-                  <div class="head">Se Connecter <span class="text-primary"> </span></div>
-                  <div class="body">
-                  
-                      <div class="form-group">
-                          <input type="email" class="form-control" [(ngModel)]="admin.email" placeholder="Email" name="email" required>
-                      </div>
-                      <div class="form-group">
-                          <input type="password" class="form-control" [(ngModel)]="admin.password" placeholder="Mot de passe" name="password" required>
-                      </div>
-                  </div>
-                  
-                  <div class="footer">
-                      <button class="btn btn-primary btn-block">Envoyer</button>
-                  </div>
-              </form> 
-              
-          </div>
-      </div>  
-  </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-7 intro-section">
+                <div class="intro-content-wrapper">
+                    <h1 class="intro-title">Bienvennue</h1>
+                    <p class="intro-text">Votre email et mot de passe seront utilisés pour vous connecter à votre compte ParionsSport</p> 
+                </div>
+                <div class="intro-section-footer">
+                    <nav class="footer-nav"> <a href="https://www.facebook.com/PromosportTunisie">Facebook</a> <a href="http://promosport.tn/fr#.YjTzI5FNHYM.twitter">Twitter</a> <a href="http://promosport.tn/fr">Google</a> </nav>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-5 form-section">
+                <div class="login-wrapper">
+                    <h2 class="login-title">Se Connecter</h2>
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
+                        <div class="form-group"> <label for="email" class="sr-only">Email</label> <input type="email" name="email" id="email" class="form-control" placeholder="Email" [(ngModel)]="admin.email" required> </div>
+                        <div class="form-group mb-3"> <label for="password" class="sr-only">Password</label> <input type="password" name="password" id="password" class="form-control" placeholder="Password" [(ngModel)]="admin.password" required> </div>
+                        <div class="footer">
+                            <button class="btn btn-warning">Se Connecter</button>
+                        </div>      
+                    </form><br>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 <router-outlet></router-outlet>
-<div class="social-wrapper" id="features">
-  <div class="container">
-      <div class="social-txt">
-          <h6 class="title">Social Media</h6>
-      </div>
-      <div class="social-links">
-        <a href="https://www.facebook.com/PromosportTunisie" class="fa fa-facebook"></a>
-        <a href="http://promosport.tn/fr#.YjTzI5FNHYM.twitter" class="fa fa-twitter"></a>
-        <a href="http://promosport.tn/fr" class="fa fa-google"></a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fpromosport.tn%2Ffr%23.YjTx9T69Pxs.linkedin" class="fa fa-linkedin"></a>
-      </div>
-  </div>          
-</div>
 
 
 
 
-<section class="section" id="contact">
-  <div class="container text-center">
-      <h6 class="display-4 has-line">CONTACT US</h6>
-      <p class="mb-5 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-      <form>
-          <div class="row mb-4">
-              <div class="col-md-6">
-                  <div class="form-group pb-1">
-                      <input type="text" class="form-control" required placeholder="Name">            
-                  </div>
-                  <div class="form-group pb-1">
-                      <input type="email" class="form-control" required placeholder="Email">          
-                  </div>
-                  <div class="form-group ">
-                      <input type="text" class="form-control" placeholder="Subject">
-                  </div>
-              </div>
-             <!--  <div class="col-md-6">
-                  <textarea name="" id="" cols="" rows="7" class="form-control" required placeholder="Message"></textarea>
-              </div> -->
-          </div>
-          <input type="submit" class="btn btn-primary btn-block" value="Send Message">
-      </form>
-  </div>
-</section>
 
 </body>
 <!-- core  -->

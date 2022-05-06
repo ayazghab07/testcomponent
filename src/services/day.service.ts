@@ -109,5 +109,6 @@ export class DayService {
     day.weekDayNumber = new Date(year, monthIndex, dayNumber).getDay();
     day.weekDayName = this.getWeekDayName(day.weekDayNumber);
 
-    return day; }
+    return day;
+  }
 }

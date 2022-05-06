@@ -24,8 +24,8 @@ export class ModifSportComponent implements OnInit {
     })
   }
   onSubmit(){
-    this.servicespo.Updatesport2(this.id, this.nouvspo).subscribe(data=>{
-      this.router.navigate(['/interfaceGestionnaire']);
+    this.servicespo.Updatespor2(this.nouvspo).subscribe(data=>{
+      this.router.navigate(['/listeSports']);
     })
 
   }

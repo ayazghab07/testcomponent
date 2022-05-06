@@ -22,7 +22,7 @@ export class CompteComponent implements OnInit {
   
   let isValidUser: Boolean = this.AuthService.SignIn(this.parieur);
  if (isValidUser)
- this.router.navigate(['/parieur']);
+ this.router.navigate(['/acceuil']);
  else
  alert('Email ou mot de passe incorrecte!');
  }

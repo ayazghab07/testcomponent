@@ -22,6 +22,10 @@ export class MatchService {
     return this.http.get("http://localhost:8092/spring/api/sport/"+sport.id);
 
   }
+  getAllSportId1(id):Observable<any>{
+    return this.http.get("http://localhost:8092/spring/api/sport/"+id);
+
+  }
   addSport(newSport:Sport){
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(newSport);
@@ -37,8 +41,8 @@ getAllMatch():Observable<any>{
   return this.http.get("http://localhost:8092/spring/api/paris");
 
 }
-public getmatch(mat){
-  return this.http.get("http://127.0.0.1:8092/spring/api/pari/"+mat.id);
+public getmatch(id){
+  return this.http.get("http://127.0.0.1:8092/spring/api/pari/"+id);
 }
 addMatch(newMatch:Match){
   const headers = { 'content-type': 'application/json'}  
@@ -64,8 +68,18 @@ public Updatesport(id: number): Observable<Sport> {
   
   return this.http.get<Sport>("http://127.0.0.1:8092/spring/api/sport/"+id);
 }
-public Updatesport2(id: number, sport: Sport): Observable<Sport> {
+
+public Updatespor2(sport: Sport): Observable<Sport> {
+    
+  return this.http.post<Sport>("http://127.0.0.1:8092/spring/api/modif-sport", sport);
+}
+public Updatematch(id: number): Observable<Match> {
   
-  return this.http.put<Sport>("http://127.0.0.1:8092/spring/api/sport/"+id, sport);
+  return this.http.get<Match>("http://127.0.0.1:8092/spring/api/pari/"+id);
+}
+
+public Updatmatch2(match: Match): Observable<Match> {
+    
+  return this.http.post<Match>("http://127.0.0.1:8092/spring/api/modifpari", match);
 }
 }

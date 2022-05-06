@@ -27,8 +27,8 @@ export class AjouterComponent implements OnInit {
      this.ParieurserService.addParieur(this.nouvparieur);  
     // document.write("l admin est ajouté"); 
     
-    window.alert("Parieur est ajouté !");
- this.router.navigate(['acceuil']);
+    window.alert("Bienvennue dans Mon Site");
+ this.router.navigate(['se_connecter']);
     isAdded:true;
  
         

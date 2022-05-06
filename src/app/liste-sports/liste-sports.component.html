@@ -38,7 +38,7 @@
                               <th><span class="text-light" >{{spo.type}}</span></th>
                               <th><span class="text-light" >{{spo.description}}</span></th>
                                <th><a (click)="clickMethod(spo.id, spo.type)" class="fa fa-trash"></a></th>
-                               <th><a (click)="Updatesport(spo.id)"class=' fa fa-edit '></a></th>
+                              <th> <a (click)="Updatesport(spo.id)" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a></th>
                                <th><a (click)="plus_de_detailes(spo.id)"><i class='fa fa-bars'></i></a></th>
                             </tr>
                           </tbody>

@@ -7,7 +7,7 @@ export class Parieur{
   email:string;
   password:string;
   tel:BigInteger;
-  codepostale:BigInteger;
+  codePostale:BigInteger;
   payer:string;
   sexe:string;
   ville:string;

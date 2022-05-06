@@ -24,7 +24,7 @@ export class ModifierParieurComponent implements OnInit {
     })
   }
   onSubmit(){
-    this.servicepar.Updatepar2(this.id, this.nouvpar).subscribe(data=>{
+    this.servicepar.Updatepar2(this.nouvpar).subscribe(data=>{
       this.router.navigate(['parieurs']);
     })
 
