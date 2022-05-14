@@ -51,7 +51,7 @@ Updatematch(id: number){
 
  }
  plus_de_detailes(id : number){
-   this.route.navigate(['equipe',id])
+   this.route.navigate(['equipes',id])
  
  }
 

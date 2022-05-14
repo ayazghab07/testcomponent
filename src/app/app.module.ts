@@ -35,6 +35,7 @@ import { JoueurComponent } from './joueur/joueur.component';
 import { ModifierJoueurComponent } from './modifier-joueur/modifier-joueur.component';
 import { AjoutJoueurComponent } from './ajout-joueur/ajout-joueur.component';
 import { Matchparieur2Component } from './matchparieur2/matchparieur2.component';
+import { SeeDetailsComponent } from './see-details/see-details.component';
 
 
 
@@ -73,6 +74,7 @@ import { Matchparieur2Component } from './matchparieur2/matchparieur2.component'
     ModifierJoueurComponent,
     AjoutJoueurComponent,
     Matchparieur2Component,
+    SeeDetailsComponent,
     
     
     

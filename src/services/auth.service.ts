@@ -16,7 +16,7 @@ public isloggedIn: boolean = false;
  
   
   constructor(private httpclient:HttpClient,private router:Router) { 
-      this.httpclient.get("http://localhost:8092/spring/api/parieurs").subscribe(
+      this.httpclient.get("http://localhost:8090/spring/api/parieurs").subscribe(
   resp=>{
     this.parrieur=Object.values(resp);
    

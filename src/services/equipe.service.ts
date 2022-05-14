@@ -14,7 +14,7 @@ export class EquipeService {
   constructor(private http: HttpClient) { }
 
   getAllEquipe():Observable<any>{
-    return this.http.get("http://localhost:8092/spring/api/equipe");
+    return this.http.get("http://localhost:8092/spring/api/equipes");
   }
   getAllEquipeId(equipe):Observable<any>{
     return this.http.get("http://localhost:8092/spring/api/equipe/"+equipe.id);

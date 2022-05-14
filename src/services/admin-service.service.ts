@@ -35,7 +35,7 @@ public isloggedIn: boolean = false;
     this.router.navigate(['/login']);
     }
     
-    SignIn(user :Admin):Boolean{
+    SignIn(user: Admin):Boolean{
       let validUser: Boolean = false;
       this.admin.forEach((curUser) => {
       if(user.email===curUser.email && user.password==curUser.password) {

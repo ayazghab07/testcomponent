@@ -22,6 +22,13 @@ export class MatchService {
     return this.http.get("http://localhost:8092/spring/api/sport/"+sport.id);
 
   }
+  public getsportid(id: number): Observable<Sport> {
+  
+
+    return this.http.get<Sport>("http://127.0.0.1:8092/spring/api/sport/"+id);
+
+  }
+  
   getAllSportId1(id):Observable<any>{
     return this.http.get("http://localhost:8092/spring/api/sport/"+id);
 
@@ -34,6 +41,12 @@ export class MatchService {
      
  });
 
+  
+}
+public getpariid(id: number): Observable<Match> {
+  
+
+  return this.http.get<Match>("http://127.0.0.1:8092/spring/api/pari/"+id);
   
 }
 

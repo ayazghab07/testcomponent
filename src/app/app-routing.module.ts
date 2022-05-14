@@ -28,6 +28,7 @@ import { JoueurComponent } from './joueur/joueur.component';
 import { ModifierJoueurComponent } from './modifier-joueur/modifier-joueur.component';
 import { AjoutJoueurComponent } from './ajout-joueur/ajout-joueur.component';
 import { Matchparieur2Component } from './matchparieur2/matchparieur2.component';
+import { SeeDetailsComponent } from './see-details/see-details.component';
 
 
 
@@ -48,7 +49,7 @@ const routes: Routes = [
   {path:'listeSports' ,component: SporttableComponent },
   {path:'concour_na' ,component:ConcoursNaComponent },
   {path:'sport/:id' ,component:MatchtableComponent},
-  {path:'equipe/:id' ,component:EquipeComponent},
+  {path:'equipes/:id' ,component:EquipeComponent},
   {path:'sports' ,component:SportsComponent},
   {path:'concour_pro' ,component:ConcourProComponent},
   {path:'commercial' ,component:CommercialComponent},
@@ -58,7 +59,7 @@ const routes: Routes = [
   {path:'update_joueur/:id' ,component:ModifierJoueurComponent},
   {path:'ajout_joueur', component:AjoutJoueurComponent},
   {path:'matchpar', component:Matchparieur2Component},
-  
+  {path:'details', component:SeeDetailsComponent}
 ];
 
 @NgModule({
